@@ -1,0 +1,28 @@
+@import "~src/styles/main.scss";
+
+.blog-card {
+    h4{
+        color:#298080;
+    }
+    a {
+        cursor: pointer;
+        &:hover {
+            color: $orange1;
+        }
+    }
+    .blog-content {
+        p {
+            word-wrap: break-word;
+            text-align: justify;
+            p {
+                word-wrap: break-word;
+            }
+        }
+    }
+    img {
+        height: 13.75rem;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+}

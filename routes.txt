@@ -1,0 +1,7 @@
+/blog/brain-training-for-dogs
+/home
+/blog
+/about-us
+/contact-us
+/auth/login
+/auth/register

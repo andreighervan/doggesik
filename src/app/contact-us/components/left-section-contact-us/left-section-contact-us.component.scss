@@ -1,0 +1,14 @@
+@import "~src/styles/main.scss";
+
+.main-contact-us{
+    h2{
+        font-weight: bold !important;
+    }
+    ::ng-deep mat-form-field{
+        display: block;
+        width: 60%;
+        @media (max-width:992px){
+            width:100%;
+        }
+    }
+}

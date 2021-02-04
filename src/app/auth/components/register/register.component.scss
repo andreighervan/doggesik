@@ -1,0 +1,47 @@
+@import "~src/styles/main.scss";
+
+.register-modal {
+  .btn-close {
+    background: none;
+    border: none;
+    outline: none;
+  }
+  .form-signin {
+    .form-label-group {
+      .form-control {
+        height: 3rem;
+        font-size: 1.4rem;
+      }
+      label {
+        font-size: 1.6rem;
+      }
+    }
+    .btn {
+      border-radius: 5rem;
+      letter-spacing: 0.1rem;
+      font-weight: bold;
+      transition: all 0.2s;
+    }
+  }
+  .btn:hover {
+    color: #212529;
+    text-decoration: none;
+  }
+  [type="button"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  button:not(:disabled) {
+    cursor: pointer;
+  }
+  .btn-google {
+    color: $color-white;
+    background-color: $google-btn;
+  }
+  .btn-facebook {
+    color: $color-white;
+    background-color: $facebook-btn;
+  }
+  .text-uppercase {
+    text-transform: uppercase !important;
+  }
+}

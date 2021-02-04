@@ -1,0 +1,67 @@
+<header class="py-10">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-left">
+                <img src="assets/img/logo.png" alt="logo" class="logo-image" />
+            </div>
+            <div class="col-md-6 d-none d-md-block">
+                <a href="http://1.gesyk1_brainydogs.pay.clickbank.net/?cbskin=19833" target="_blank"><img
+                        src="assets/img/dog-training-header.jpg" alt="logo" class="ad-image img-fluid" /></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- nav section-->
+<section class="nav-section">
+    <div class="container">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg w-100 py-0">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+<<<<<<< HEAD
+                    <i class="fas fa-bars"></i>
+=======
+                    <span class="navbar-toggler-icon"></span>
+>>>>>>> 6f705bb4acb32c47658e93f78b9f83190f25d2a3
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/home" routerLinkActive="active-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/blog" routerLinkActive="active-link">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/about-us" routerLinkActive="active-link">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/contact-us" routerLinkActive="active-link">Contact Us</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item" *ngIf="editorUser">
+                            <a class="nav-link" routerLink="/blog/add-new-post" routerLinkActive="active-link">Add New
+                                Post</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/auth/login" *ngIf="isLoggedOut$ | async"
+                                routerLinkActive="active-link">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/auth/register" *ngIf="isLoggedOut$ | async"
+                                routerLinkActive="active-link">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" (click)="signOut()" *ngIf="isLoggedIn$ | async"
+                                routerLinkActive="active-link">Sign Out</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</section>

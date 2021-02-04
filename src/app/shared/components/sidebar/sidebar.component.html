@@ -1,0 +1,36 @@
+<aside class="pb-10 px-20">
+    <div class="widget">
+        <p class="font-weight-bold text-uppercase mb-20"><i class="fas fa-square mr-5"></i> Recent Posts</p>
+        <div *ngFor="let blogItem of blogPosts">
+            <div class="media">
+                <a (click)=" goToSinglePost(blogItem)" target="_blank"><img class="img-recent-posts"
+                        [src]="blogItem.fileUploaded" [alt]="blogItem.title"></a>
+                <div class="media-body">
+                    <a (click)=" goToSinglePost(blogItem)" target="_blank">
+                        <p class="font-weight-bold">{{blogItem.title}}</p>
+                    </a>
+                    <span class="text-lightgray"><i class="fas fa-clock"></i> {{blogItem.uploadedDate | date:'MMMM d,
+                        y'}}</span>
+                </div>
+            </div>
+        </div>
+        <hr />
+    </div>
+    <div class="widget">
+        <p class="font-weight-bold text-uppercase mb-20"><i class="fas fa-square mr-5"></i> Tag Cloud</p>
+        <div class="tags">
+            <a href="https://www.doggesik.com/blog/Brain%20training%20for%20dogs%20%20-%20Develops%20your%20dog's%20natural%20intelligence"
+                class="tag">house training a dog</a><a
+                href="https://www.doggesik.com/blog/Brain%20training%20for%20dogs%20%20-%20Develops%20your%20dog's%20natural%20intelligence"
+                class="tag">dog training</a>
+            <a href="https://www.doggesik.com/blog/Brain%20training%20for%20dogs%20%20-%20Develops%20your%20dog's%20natural%20intelligence"
+                class="tag">brain training for dogs</a>
+        </div>
+        <hr />
+    </div>
+    <div class="widget text-center">
+        <a href="http://1.gesyk1_brainydogs.pay.clickbank.net/?cbskin=19833" target="_blank"><img class="img-fluid"
+                src="assets/img/dog-training-sidebar.gif" alt="Genius Dog 300 x 250 - Animated" /></a>
+    </div>
+    <hr />
+</aside>

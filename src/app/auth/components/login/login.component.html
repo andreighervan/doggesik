@@ -1,0 +1,53 @@
+<div class="login-modal py-30">
+    <div class="container">
+        <div class="row my-4">
+            <div class="col-sm-4 col-sm-offset-4">
+                <div class="card card-signin my-5">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Sign In</h5>
+                        <form class="form-signin" #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+                            <div class="row" *ngIf="authError">
+                                <div class="col-12 alert alert-danger">{{ authError?.message }}</div>
+                            </div>
+
+                            <mat-form-field class="form-field w-100" appearance="standard">
+                                <mat-label> Email address</mat-label>
+                                <input ngModel #email="ngModel" name="email" type="email" placeholder="Email address" required matInput>
+                                <mat-error
+                                    *ngIf="email.touched && email.invalid">
+                                    <span *ngIf="email.errors.required">This field is
+                                        mandatory.</span>
+                                </mat-error>
+                            </mat-form-field>
+
+                            <mat-form-field class="form-field w-100" appearance="standard">
+                                <mat-label> Password</mat-label>
+                                <input ngModel #password="ngModel" placeholder="Password" name="password" required  matInput>
+                                <mat-error *ngIf="password.touched && password.invalid">
+                                    <span *ngIf="password.errors.required">This field is
+                                        mandatory.</span>
+                                </mat-error>
+                            </mat-form-field>
+
+                            <div class="custom-control custom-checkbox my-10">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                <label class="custom-control-label" for="customCheck1">Remember password</label>
+                            </div>
+                            <button class="btn btn-primary btn-block text-uppercase" type="submit">Sign
+                                in</button>
+                            <div class="col-12 py-10">
+                                <a  routerLink="/auth/register">Click here to register</a>
+                            </div>
+                            <hr class="my-4">
+                            <button class="btn btn-google btn-block text-uppercase" (click)="doGoogleLogin()"><i
+                                    class="fab fa-google mr-2"></i> Sign in with Google</button>
+                            <button class="btn btn-facebook btn-block text-uppercase"
+                                (click)="doFacebookLogin()"><i class="fab fa-facebook-f mr-2"></i> Sign in with
+                                Facebook</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

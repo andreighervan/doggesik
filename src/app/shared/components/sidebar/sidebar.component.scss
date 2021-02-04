@@ -1,0 +1,43 @@
+@import "~src/styles/main.scss";
+
+.widget {
+    .tags {
+        a.tag {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+        background: #298080;
+            margin: 0 0.25rem 0.5rem 0;
+            padding: 0.125rem 0.875rem;
+            border-radius: 4px;
+            line-height: 28px;
+            &:hover {
+                background: $orange1;
+                color: white;
+            }
+        }
+    }
+    .blog-content {
+        p {
+            word-wrap: break-word;
+            p {
+                word-wrap: break-word;
+            }
+        }
+    }
+    img.img-recent-posts {
+        width: 80px;
+        height: 80px;
+        margin-right: 14px;
+        cursor: pointer;
+    }
+    .media {
+        margin-bottom: 0.875rem;
+        a p {
+            cursor: pointer;
+            &:hover {
+                color: $orange1;
+            }
+        }
+    }
+}

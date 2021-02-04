@@ -1,0 +1,9 @@
+@import "~src/styles/main.scss";
+
+.add-post-wrapper{
+   ::ng-deep .editor{
+        min-height: 900px;
+        border:1px solid gray;
+        padding:15px;
+    }
+}

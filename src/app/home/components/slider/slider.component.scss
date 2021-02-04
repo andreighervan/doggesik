@@ -1,0 +1,43 @@
+@import "~src/styles/main.scss";
+
+.carousel-home{
+    .carousel-item{
+        height:31.25rem;
+        img{
+<<<<<<< HEAD
+            height: 500px;
+        }
+        .get-help{
+            position:absolute;
+            top:0;
+            right:11%;
+            img{
+                height:3.75rem;
+            }
+=======
+            filter: brightness(50%);
+>>>>>>> 6f705bb4acb32c47658e93f78b9f83190f25d2a3
+        }
+        .carousel-caption{
+           transform:translateY(-50%);
+           top:50%;
+           left:11%;
+<<<<<<< HEAD
+           h3{
+               font-weight:bold;
+               width:30rem;
+               background: white;
+               color:black;
+               opacity:.7;
+           }
+           h2{
+               background: #298080;
+               width:25rem;
+=======
+           h2,p{
+               font-weight:bold;
+>>>>>>> 6f705bb4acb32c47658e93f78b9f83190f25d2a3
+           }
+        }
+    }
+}

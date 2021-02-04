@@ -1,0 +1,44 @@
+<section class="add-post-wrapper py-40">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h3>Add New Post</h3>
+                <form [formGroup]="blogForm" (ngSubmit)="onSubmit(blogForm.value)">
+                    <mat-form-field class="form-field w-100" appearance="standard">
+                        <mat-label>Title</mat-label>
+                        <input matInput formControlName="title" required>
+                        <mat-error *ngIf="blogForm.controls.title.touched && blogForm.controls.title.invalid">
+                            <span *ngIf="blogForm.controls.title.errors.required">This field is mandatory.</span>
+                        </mat-error>
+                    </mat-form-field>
+                    <h5 class="my-10">Blog Content</h5>
+                    <mat-tab-group>
+                        <mat-tab label="HTML Content"> 
+                            <textarea class="editor w-100" [(ngModel)]="blogPostContent" formControlName="blogContent"></textarea>
+                        </mat-tab>
+                        <mat-tab label="Preview">
+                            <div class="editor w-100 my-10" [innerHTML]="blogPostContent"></div>
+                        </mat-tab>
+                    </mat-tab-group>
+                     <textarea class="w-100" formControlName="shortDescription"></textarea>
+                    <input type="file" class="d-block my-20" (change)="uploadFile($event)">
+                    <div class="upload-progress" *ngIf="(uploadPercent$ | async) as percentage">
+                    
+                        Upload Progress:
+                    
+                        <mat-progress-bar class="progress-bar" mode="determinate" [value]="percentage">
+                    
+                        </mat-progress-bar>
+                    
+                        <span>{{percentage / 100 | percent}}</span>
+                    
+                    </div>
+                    <button type="submit" class="btn btn-primary my-20">Add New Post</button>
+                </form>
+            </div>
+            <div class="col-md-4">
+                <app-sidebar></app-sidebar>
+            </div>
+        </div>
+    </div>
+</section>

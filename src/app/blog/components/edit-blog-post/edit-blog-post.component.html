@@ -1,0 +1,33 @@
+<section class="edit-post-wrapper py-40">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h3>Edit Post</h3>
+                <form [formGroup]="blogForm" (ngSubmit)="onSubmit(blogForm.value, blog)">
+                    <mat-form-field class="form-field w-100" appearance="standard">
+                        <mat-label>Title</mat-label>
+                        <input matInput formControlName="title" required>
+                        <mat-error *ngIf="blogForm.controls.title.touched && blogForm.controls.title.invalid">
+                            <span *ngIf="blogForm.controls.title.errors.required">This field is mandatory.</span>
+                        </mat-error>
+                    </mat-form-field>
+                    <!--  <mat-tab-group>
+                        <mat-tab label="HTML Content">
+                            <textarea class="editor w-100" formControlName="blogContent"></textarea>
+                        </mat-tab>
+                        <mat-tab label="Preview">
+                            
+                        </mat-tab>
+                    </mat-tab-group> -->
+                    <textarea class="editor w-100" formControlName="blogContent"></textarea>
+                    <img [src]="urlImage" style="height:100px;" />
+                    <input type="file" class="d-block my-20" (change)="uploadFile($event)">
+                    <button type="submit" class="btn btn-primary my-20">Edit Post</button>
+                </form>
+            </div>
+            <div class="col-md-4">
+                <app-sidebar></app-sidebar>
+            </div>
+        </div>
+    </div>
+</section>

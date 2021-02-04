@@ -1,0 +1,31 @@
+<section class="main-contact-us">
+    <h2>Contact Us</h2>
+    <form [formGroup]="contactForm" (submit)="submit()">
+        <mat-form-field class="form-field" appearance="standard">
+            <mat-label> Your Name*</mat-label>
+            <input matInput formControlName="name">
+            <mat-error *ngIf="contactForm.controls.name.touched && contactForm.controls.name.invalid">
+                <span *ngIf="contactForm.controls.name.errors.required">This field is mandatory.</span>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field class="form-field" appearance="standard">
+            <mat-label> Your Email*
+            </mat-label>
+            <input matInput formControlName="email" type="email">
+            <mat-error *ngIf="contactForm.controls.email.touched && contactForm.controls.email.invalid">
+                <span *ngIf="contactForm.controls.email.errors.required">This field is mandatory.</span>
+                <span *ngIf="contactForm.controls.email.errors.pattern">This field is invalid.</span>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field class="form-field" appearance="standard">
+            <mat-label>Your Message*
+            </mat-label>
+            <textarea matInput appearance="standard" rows="5"
+                formControlName="message"></textarea>
+            <mat-error *ngIf="contactForm.controls.message.touched && contactForm.controls.message.invalid">
+                <span *ngIf="contactForm.controls.message.errors.required">This field is mandatory.</span>
+            </mat-error>
+        </mat-form-field>
+        <button class="btn btn-primary text-uppercase mt-10" type="submit">Contact Us</button>
+    </form>
+</section>
