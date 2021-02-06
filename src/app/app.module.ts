@@ -29,14 +29,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AngularFireStorageModule,
     SharedModule
   ],
-<<<<<<< HEAD
   bootstrap: [AppComponent]
 })
 export class AppModule { }
 
-=======
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
->>>>>>> 6f705bb4acb32c47658e93f78b9f83190f25d2a3

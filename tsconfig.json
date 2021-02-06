@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
-=======
->>>>>>> 6f705bb4acb32c47658e93f78b9f83190f25d2a3
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -11,7 +8,6 @@
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
-<<<<<<< HEAD
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
@@ -20,23 +16,5 @@
       "es2018",
       "dom"
     ]
-=======
-    "module": "esnext",
-    "moduleResolution": "node",
-    "importHelpers": true,
-    "target": "es2015",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2018",
-      "dom"
-    ],
-    "skipLibCheck": true,
-  },
-  "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
->>>>>>> 6f705bb4acb32c47658e93f78b9f83190f25d2a3
   }
 }

@@ -17,57 +17,30 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-<<<<<<< HEAD
             "outputPath": "dist/gesiklo/browser",
-=======
-            "outputPath": "dist/browser",
->>>>>>> 6f705bb4acb32c47658e93f78b9f83190f25d2a3
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-<<<<<<< HEAD
             "aot": true,
-=======
-            "aot": false,
->>>>>>> 6f705bb4acb32c47658e93f78b9f83190f25d2a3
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
-<<<<<<< HEAD
             "stylePreprocessorOptions": {
               "includePaths": [
                 "./styles"
               ]
             },
-=======
->>>>>>> 6f705bb4acb32c47658e93f78b9f83190f25d2a3
             "styles": [
               "src/styles.scss",
               "src/assets/icons/fontawesome.min.css",
               "src/assets/icons/brands.min.css",
-<<<<<<< HEAD
               "src/assets/icons/solid.min.css"
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js",
               "./node_modules/bootstrap/dist/js/bootstrap.min.js"
-=======
-              "src/assets/icons/solid.min.css",
-              "./node_modules/froala-editor/css/froala_editor.pkgd.min.css",
-              "./node_modules/froala-editor/css/froala_style.min.css"
-            ],
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "src/styles"
-              ]
-            },
-            "scripts": [
-              "./node_modules/jquery/dist/jquery.min.js",
-              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "./node_modules/froala-editor/js/froala_editor.pkgd.min.js"
->>>>>>> 6f705bb4acb32c47658e93f78b9f83190f25d2a3
             ]
           },
           "configurations": {
@@ -81,20 +54,13 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-<<<<<<< HEAD
               "namedChunks": false,
-=======
-              "extractCss": true,
-              "namedChunks": false,
-              "aot": true,
->>>>>>> 6f705bb4acb32c47658e93f78b9f83190f25d2a3
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
-<<<<<<< HEAD
                   "maximumWarning": "12mb",
                   "maximumError": "15mb"
                 },
@@ -102,15 +68,6 @@
                   "type": "anyComponentStyle",
                   "maximumWarning": "16mb",
                   "maximumError": "10mb"
-=======
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
->>>>>>> 6f705bb4acb32c47658e93f78b9f83190f25d2a3
                 }
               ]
             }
@@ -156,12 +113,8 @@
             "tsConfig": [
               "tsconfig.app.json",
               "tsconfig.spec.json",
-<<<<<<< HEAD
               "e2e/tsconfig.json",
               "tsconfig.server.json"
-=======
-              "e2e/tsconfig.json"
->>>>>>> 6f705bb4acb32c47658e93f78b9f83190f25d2a3
             ],
             "exclude": [
               "**/node_modules/**"
@@ -183,7 +136,6 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-<<<<<<< HEAD
             "outputPath": "dist/gesiklo/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json",
@@ -194,14 +146,6 @@
           "configurations": {
             "production": {
               "outputHashing": "media",
-=======
-            "outputPath": "dist/server",
-            "main": "src/main.server.ts",
-            "tsConfig": "tsconfig.server.json"
-          },
-          "configurations": {
-            "production": {
->>>>>>> 6f705bb4acb32c47658e93f78b9f83190f25d2a3
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -209,14 +153,7 @@
                 }
               ],
               "sourceMap": false,
-<<<<<<< HEAD
               "optimization": true
-=======
-              "optimization": {
-                "scripts": false,
-                "styles": true
-              }
->>>>>>> 6f705bb4acb32c47658e93f78b9f83190f25d2a3
             }
           }
         },
@@ -229,11 +166,7 @@
           "configurations": {
             "production": {
               "browserTarget": "gesiklo:build:production",
-<<<<<<< HEAD
               "serverTarget": "gesiklo:server:production"
-=======
-              "serverTarget": "agesiklo:server:production"
->>>>>>> 6f705bb4acb32c47658e93f78b9f83190f25d2a3
             }
           }
         },

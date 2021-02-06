@@ -1,15 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-<<<<<<< HEAD
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
-=======
-import { MatButtonModule, MatFormFieldModule, MatInputModule } from '@angular/material';
->>>>>>> 6f705bb4acb32c47658e93f78b9f83190f25d2a3
 import { TextFieldModule } from '@angular/cdk/text-field';
 
 import { ContactUsRoutingModule } from './contact-us-routing.module';

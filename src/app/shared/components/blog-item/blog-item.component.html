@@ -1,11 +1,7 @@
 <div class="blog-card mb-40 col-md-6" *ngFor="let blogItem of blogPosts">
     <img [src]="blogItem.fileUploaded" [alt]="blogItem.title" />
     <a (click)=" goToSinglePost(blogItem)" target="_blank">
-<<<<<<< HEAD
         <h4 class="font-weight-bold py-20">{{blogItem.title}}</h4>
-=======
-        <h4 class="font-weight-bold py-5">{{blogItem.title}}</h4>
->>>>>>> 6f705bb4acb32c47658e93f78b9f83190f25d2a3
     </a>
     <span class="text-lightgray"><i class="fas fa-clock"></i> {{blogItem.uploadedDate | date:'MMMM d, y'}}</span>
     <div class="blog-content mt-5">
@@ -14,4 +10,6 @@
     <button type="button" class="btn btn-success mr-10" *ngIf="editorRole" (click)="editPost(blogItem)">EDIT
         POST</button>
     <button type="button" class="btn btn-danger" *ngIf="editorRole" (click)="deletePost(blogItem)">DELETE POST</button>
+    <button type="button" class="btn btn-see-more btn-outline-success my-10" (click)=" goToSinglePost(blogItem)">See
+        More...</button>
 </div>

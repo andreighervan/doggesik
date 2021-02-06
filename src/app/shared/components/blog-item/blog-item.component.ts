@@ -44,6 +44,7 @@ export class BlogItemComponent implements OnInit {
   }
 
   goToSinglePost(post) {
+    window.scrollTo({ top: 0 });
     this.router.navigate(['/blog', post.postUrl]);
   }
 

@@ -1,8 +1,4 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-<<<<<<< HEAD
-=======
-
->>>>>>> 6f705bb4acb32c47658e93f78b9f83190f25d2a3
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',

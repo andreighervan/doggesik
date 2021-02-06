@@ -8,6 +8,7 @@ $orange: #e57632;
 $gray1: #111416;
 $gray2:#aeaeae;
 $blue: #064a88;
+$green:#298080;
 
 $theme-colors: (
   "orange": $orange,
@@ -18,6 +19,7 @@ $theme-colors: (
   "gray": $gray1,
   "lightgray":$gray2,
   "primary": $blue,
+  "success":$green
 ) !default;
 
 $gray1: #22292d;
