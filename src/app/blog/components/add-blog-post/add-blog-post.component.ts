@@ -18,7 +18,7 @@ export class AddBlogPostComponent implements OnInit {
   blogPostContent;
   filePath: any;
   urlImage: string;
-  downloadableURL=new BehaviorSubject<string>('');
+  downloadableURL = new BehaviorSubject<string>('');
 
   uploadPercent$: Observable<number>;
 
@@ -58,7 +58,6 @@ export class AddBlogPostComponent implements OnInit {
   }
 
   onSubmit(value) {
-    debugger;
     this.blogService.createBlogPost(value, this.urlImage)
       .then(
         res => {

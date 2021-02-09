@@ -12,7 +12,9 @@
     "dev:ssr": "ng run gesiklo:serve-ssr",
     "serve:ssr": "node dist/gesiklo/server/main.js",
     "build:ssr": "ng build --prod && ng run gesiklo:server:production",
-    "prerender": "ng run gesiklo:prerender"
+    "prerender": "ng run gesiklo:prerender",
+    "build:functions": "npm run --prefix functions build",
+    "build:all": "npm run build:ssr && npm run build:functions"
   },
   "private": true,
   "dependencies": {
