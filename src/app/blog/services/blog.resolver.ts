@@ -9,7 +9,7 @@ import { BlogService } from './blog.service';
 })
 export class BlogResolver {
 
-  constructor(private blogService:BlogService ) { }
+  constructor(private blogService: BlogService) { }
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot):
     Observable<Blog> {

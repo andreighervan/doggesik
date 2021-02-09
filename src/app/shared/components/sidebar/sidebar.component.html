@@ -3,10 +3,10 @@
         <p class="font-weight-bold text-uppercase mb-20"><i class="fas fa-square mr-5"></i> Recent Posts</p>
         <div *ngFor="let blogItem of blogPosts">
             <div class="media">
-                <a (click)=" goToSinglePost(blogItem)" target="_blank"><img class="img-recent-posts"
-                        [src]="blogItem.fileUploaded" [alt]="blogItem.title"></a>
+                <a (click)="goToSinglePost(blogItem)"><img class="img-recent-posts" [src]="blogItem.smallImage"
+                        [alt]="blogItem.title"></a>
                 <div class="media-body">
-                    <a (click)=" goToSinglePost(blogItem)" target="_blank">
+                    <a (click)="goToSinglePost(blogItem)" class="text-success">
                         <p class="font-weight-bold">{{blogItem.title}}</p>
                     </a>
                     <span class="text-lightgray"><i class="fas fa-clock"></i> {{blogItem.uploadedDate | date:'MMMM d,

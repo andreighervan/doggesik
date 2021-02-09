@@ -1,8 +1,9 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { fromEvent } from 'rxjs';
+import { ActivatedRoute, ActivationStart, Route } from '@angular/router';
+import { fromEvent, Subscription } from 'rxjs';
 import { Blog } from '../../models/blog';
+import { BlogService } from '../../services/blog.service';
 
 @Component({
   selector: 'app-blog-single',
@@ -13,12 +14,20 @@ import { Blog } from '../../models/blog';
 export class BlogSingleComponent implements OnInit {
   blog: Blog;
   color = 'blue-2';
+  private sub: Subscription;
   constructor(private route: ActivatedRoute,
-    private viewportScroller: ViewportScroller) {
+    private viewportScroller: ViewportScroller,
+    private blogService: BlogService) {
   }
 
   ngOnInit() {
-    this.blog = this.route.snapshot.data["blogPost"];
+    this.sub = this.route.data.subscribe(event => {
+      this.blog = event['blogPost'];
+    })
+  }
+
+  ngOnDestroy() {
+    this.sub.unsubscribe();
   }
 
   onClickScroll(elementId: string) {

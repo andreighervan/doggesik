@@ -17,9 +17,10 @@ import { AddBlogPostComponent } from './components/add-blog-post/add-blog-post.c
 import { EditBlogPostComponent } from './components/edit-blog-post/edit-blog-post.component';
 import { BlogSingleComponent } from './components/blog-single/blog-single.component';
 import { BlogContentComponent } from './components/blog-content/blog-content.component';
+import { CommentComponent } from './components/comment/comment.component';
 
 @NgModule({
-  declarations: [BlogComponent, AddBlogPostComponent, EditBlogPostComponent, BlogSingleComponent, BlogContentComponent],
+  declarations: [BlogComponent, AddBlogPostComponent, EditBlogPostComponent, BlogSingleComponent, BlogContentComponent, CommentComponent],
   imports: [
     CommonModule,
     BlogRoutingModule,
@@ -32,6 +33,10 @@ import { BlogContentComponent } from './components/blog-content/blog-content.com
     MatProgressBarModule,
     MatCardModule,
     MatButtonModule
+  ],
+
+  entryComponents: [
+    CommentComponent
   ]
 })
 export class BlogModule { }

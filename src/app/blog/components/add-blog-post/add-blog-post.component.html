@@ -13,25 +13,26 @@
                     </mat-form-field>
                     <h5 class="my-10">Blog Content</h5>
                     <mat-tab-group>
-                        <mat-tab label="HTML Content"> 
-                            <textarea class="editor w-100" [(ngModel)]="blogPostContent" formControlName="blogContent"></textarea>
+                        <mat-tab label="HTML Content">
+                            <textarea class="editor w-100" [(ngModel)]="blogPostContent"
+                                formControlName="blogContent"></textarea>
                         </mat-tab>
                         <mat-tab label="Preview">
                             <div class="editor w-100 my-10" [innerHTML]="blogPostContent"></div>
                         </mat-tab>
                     </mat-tab-group>
-                     <textarea class="w-100" formControlName="shortDescription"></textarea>
+                    <textarea class="w-100" formControlName="shortDescription"></textarea>
                     <input type="file" class="d-block my-20" (change)="uploadFile($event)">
                     <div class="upload-progress" *ngIf="(uploadPercent$ | async) as percentage">
-                    
+
                         Upload Progress:
-                    
+
                         <mat-progress-bar class="progress-bar" mode="determinate" [value]="percentage">
-                    
+
                         </mat-progress-bar>
-                    
+
                         <span>{{percentage / 100 | percent}}</span>
-                    
+
                     </div>
                     <button type="submit" class="btn btn-primary my-20">Add New Post</button>
                 </form>

@@ -1,14 +1,14 @@
-[debug] [2021-02-04T17:48:51.265Z] ----------------------------------------------------------------------
-[debug] [2021-02-04T17:48:51.267Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Andrei\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
-[debug] [2021-02-04T17:48:51.267Z] CLI Version:   9.2.2
-[debug] [2021-02-04T17:48:51.267Z] Platform:      win32
-[debug] [2021-02-04T17:48:51.267Z] Node Version:  v14.15.4
-[debug] [2021-02-04T17:48:51.268Z] Time:          Thu Feb 04 2021 19:48:51 GMT+0200 (Eastern European Standard Time)
-[debug] [2021-02-04T17:48:51.268Z] ----------------------------------------------------------------------
-[debug] [2021-02-04T17:48:51.268Z] 
-[debug] [2021-02-04T17:48:51.270Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
-[debug] [2021-02-04T17:48:51.290Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2021-02-04T17:48:51.290Z] > authorizing via signed-in user
+[debug] [2021-02-09T17:45:51.098Z] ----------------------------------------------------------------------
+[debug] [2021-02-09T17:45:51.099Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Andrei\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-02-09T17:45:51.100Z] CLI Version:   9.2.2
+[debug] [2021-02-09T17:45:51.100Z] Platform:      win32
+[debug] [2021-02-09T17:45:51.100Z] Node Version:  v14.15.4
+[debug] [2021-02-09T17:45:51.101Z] Time:          Tue Feb 09 2021 19:45:51 GMT+0200 (Eastern European Standard Time)
+[debug] [2021-02-09T17:45:51.101Z] ----------------------------------------------------------------------
+[debug] [2021-02-09T17:45:51.101Z] 
+[debug] [2021-02-09T17:45:51.140Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2021-02-09T17:45:51.256Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-02-09T17:45:51.257Z] > authorizing via signed-in user
 [info] 
      ######## #### ########  ######## ########     ###     ######  ########
      ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
@@ -18,33 +18,9 @@
 
 You're about to initialize a Firebase project in this directory:
 
-  D:\doggesik.com\ng-cms
+  D:\doggesik.com\doggesik-ng
 
 Before we get started, keep in mind:
 
   * You are initializing in an existing Firebase project directory
 
-[debug] [2021-02-04T17:48:51.874Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
-[debug] [2021-02-04T17:48:51.875Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
-[info] 
-=== Project Setup
-[info] 
-[info] First, let's associate this project directory with a Firebase project.
-[info] You can create multiple project aliases by running firebase use --add, 
-[info] but for now we'll just set up a default project.
-[info] 
-[info] i  .firebaserc already has a default project, using doggesik-6cee1. 
-[debug] [2021-02-04T17:49:16.265Z] > refreshing access token with scopes: []
-[debug] [2021-02-04T17:49:16.265Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- <request body omitted>
-[debug] [2021-02-04T17:49:16.561Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Thu, 04 Feb 2021 17:49:16 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
-[debug] [2021-02-04T17:49:16.572Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/doggesik-6cee1 [none]
-[debug] [2021-02-04T17:49:16.943Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/doggesik-6cee1 200
-[debug] [2021-02-04T17:49:16.943Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/doggesik-6cee1 {"projectId":"doggesik-6cee1","projectNumber":"1097100126835","displayName":"doggesik","name":"projects/doggesik-6cee1","resources":{"hostingSite":"doggesik-6cee1","storageBucket":"doggesik-6cee1.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
-[info] 
-=== Hosting Setup
-[info] 
-[info] Your public directory is the folder (relative to your project directory) that
-[info] will contain Hosting assets to be uploaded with firebase deploy. If you
-[info] have a build process for your assets, use your build's output directory.
-[info] 

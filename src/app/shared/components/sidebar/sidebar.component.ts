@@ -21,10 +21,8 @@ export class SidebarComponent implements OnInit {
   }
 
   loadBlogPosts() {
-    this.blogService.loadAllPosts()
-      .pipe(
-        take(3)
-      ).subscribe(posts => this.blogPosts = posts);
+    this.blogService.loadAllPosts(3)
+      .subscribe(posts => this.blogPosts = posts);
   }
 
   goToSinglePost(post) {

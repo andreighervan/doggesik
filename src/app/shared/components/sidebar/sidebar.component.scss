@@ -33,11 +33,14 @@
     }
     .media {
         margin-bottom: 0.875rem;
-        a p {
+        a{ 
+            text-decoration: none;
+            p {
             cursor: pointer;
             &:hover {
                 color: $orange1;
             }
+        }
         }
     }
 }
