@@ -1,0 +1,114 @@
+<section class="hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2 my-40">
+                <h1 class="text-center text-blue">Collect 193% more Leads with Magnet, a conversion optimized Landing
+                    Page for
+                    your eBook, Freebie and
+                    Lead Magnet.</h1>
+            </div>
+        </div>
+        <div class="row features">
+            <div class="col-md-6">
+            </div>
+            <div class="col-md-6">
+                <p>Use this Landing Page Template to promote your eBook, your Lead Magnet or your free download and
+                    grow
+                    your email list fast (without ever having to "write" a single line of code). This HTML Landing
+                    Page
+                    template is perfect for...</p>
+                <ul class="features-list">
+                    <li><i class="fa fa-check" aria-hidden="true"></i> Internet Marketers who want to grow their
+                        email
+                        list</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i> Authors who want to promote their new eBook
+                    </li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i> Bloggers who offer a free bonus for new
+                        subscribers</li>
+                </ul>
+                <p><strong>Get your free copy by filling out the form below:</strong></p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="ebook-form bg-blue">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="assets/img/landing-page/free-ebook.png" class="img-fluid img-ebook" alt="free ebook" />
+            </div>
+            <div class="col-md-6">
+                <form [formGroup]="newsletterForm" (submit)="submit()" class="newsletter-form">
+                    <mat-form-field class="form-field" appearance="standard">
+                        <mat-label> Your Name*</mat-label>
+                        <input matInput formControlName="name">
+                        <mat-error *ngIf="newsletterForm.controls.name.touched && newsletterForm.controls.name.invalid">
+                            <span *ngIf="newsletterForm.controls.name.errors.required">This field is mandatory.</span>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field class="form-field" appearance="standard">
+                        <mat-label> Your Email*
+                        </mat-label>
+                        <input matInput formControlName="email" type="email">
+                        <mat-error
+                            *ngIf="newsletterForm.controls.email.touched && newsletterForm.controls.email.invalid">
+                            <span *ngIf="newsletterForm.controls.email.errors.required">This field is mandatory.</span>
+                            <span *ngIf="newsletterForm.controls.email.errors.pattern">This field is invalid.</span>
+                        </mat-error>
+                    </mat-form-field>
+                    <button class="btn btn-light text-blue font-weight-bold btn-block text-uppercase mt-10"
+                        type="submit">GET FREE
+                        EBOOK</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="testimonials">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center">What Others Say</h1>
+                <p class="text-center mb-50">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <img src="assets/img/landing-page/testimonial1.jpg" class="rounded-circle" alt="testimonial" />
+                    <p class="text-paragraph">Denim you probably haven't heard of. Lorem ipsum dolor met consectetur
+                        adipisicing sit amet,
+                        consectetur adipisicing elit, of them jean shorts sed magna aliqua.</p>
+                    <p><strong>John Doe, Website.com</strong></p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <img src="assets/img/landing-page/testimonial2.jpg" class="rounded-circle" alt="testimonial" />
+                    <p class="text-paragraph">Denim you probably haven't heard of. Lorem ipsum dolor met consectetur
+                        adipisicing sit amet,
+                        consectetur adipisicing elit, of them jean shorts sed magna aliqua.</p>
+                    <p><strong>John Doe, Website.com</strong></p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <img src="assets/img/landing-page/testimonial3.jpg" class="rounded-circle" alt="testimonial" />
+                    <p class="text-paragraph">Denim you probably haven't heard of. Lorem ipsum dolor met consectetur
+                        adipisicing sit amet,
+                        consectetur adipisicing elit, of them jean shorts sed magna aliqua.</p>
+                    <p><strong>John Doe, Website.com</strong></p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <img src="assets/img/landing-page/testimonial4.jpg" class="rounded-circle" alt="testimonial" />
+                    <p class="text-paragraph">Denim you probably haven't heard of. Lorem ipsum dolor met consectetur
+                        adipisicing sit amet,
+                        consectetur adipisicing elit, of them jean shorts sed magna aliqua.</p>
+                    <p><strong>John Doe, Website.com</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
