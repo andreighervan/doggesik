@@ -4,7 +4,7 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
-    "public": "dist/gesiklo/browser",
+    "public": "dist/gesiklo/server",
     "ignore": [
       "firebase.json",
       "**/.*",
