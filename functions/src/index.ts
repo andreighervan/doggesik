@@ -8,6 +8,6 @@ import * as functions from "firebase-functions";
 //   response.send("Hello from Firebase!");
 // });
 
-const universal = require(`${process.cwd()}/dist/gesiklo/server`).app();
+const universal = require(`${process.cwd()}/dist/gesiklo/server/main`).app();
 
 export const ssr = functions.https.onRequest(universal);
