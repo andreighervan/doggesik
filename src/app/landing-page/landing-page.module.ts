@@ -8,10 +8,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ThankYouEbookComponent } from './components/thank-you-ebook/thank-you-ebook.component';
+import { DownloadFreeEbookComponent } from './components/download-free-ebook/download-free-ebook.component';
 
 
 @NgModule({
-  declarations: [LandingPageComponent, LandingFreeEbookComponent],
+  declarations: [LandingPageComponent, LandingFreeEbookComponent, ThankYouEbookComponent, DownloadFreeEbookComponent],
   imports: [
     CommonModule,
     LandingPageRoutingModule,

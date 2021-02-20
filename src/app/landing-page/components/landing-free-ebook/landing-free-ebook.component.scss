@@ -14,7 +14,7 @@
         padding: 2.5rem 0 1.25rem 0;
         ul.features-list{
             list-style-type: none;
-            margin-top: 30px;
+            margin-top: 15px;
             margin-bottom: 30px;
             padding-left:0;
             li{
@@ -60,6 +60,19 @@
         .mat-form-field-underline{
             background: white;
         }
+        input{
+            color:white;
+            font-size:21px;
+        }
+        mat-error{
+            font-size:16px;
+            color:red;
+            margin-bottom:10px;
+        }
+    }
+    p{
+        font-size:16px;
+        line-height:20px;
     }
 }
 
@@ -86,4 +99,16 @@ border-radius:4px;
         margin:0 auto;
     }
  }
+}
+
+.call-to-action{
+    h1{
+        font-size:28px;
+    }
+    a.btn-download{
+        height: 55px;
+        line-height: 55px;
+        font-size: 18px;
+        padding:0;
+    }
 }

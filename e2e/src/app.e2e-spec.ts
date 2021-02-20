@@ -8,15 +8,9 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-<<<<<<< HEAD
   it('should display welcome message', async () => {
     await page.navigateTo();
     expect(await page.getTitleText()).toEqual('gesiklo app is running!');
-=======
-  it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getTitleText()).toEqual('gesiklo app is running!');
->>>>>>> 6f705bb4acb32c47658e93f78b9f83190f25d2a3
   });
 
   afterEach(async () => {
