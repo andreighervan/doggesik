@@ -6,7 +6,7 @@
                 <form [formGroup]="blogForm" (ngSubmit)="onSubmit(blogForm.value)">
                     <mat-form-field class="form-field w-100" appearance="standard">
                         <mat-label>Title</mat-label>
-                        <input matInput formControlName="title" required>
+                        <input matInput formControlName="title">
                         <mat-error *ngIf="blogForm.controls.title.touched && blogForm.controls.title.invalid">
                             <span *ngIf="blogForm.controls.title.errors.required">This field is mandatory.</span>
                         </mat-error>
@@ -21,7 +21,30 @@
                             <div class="editor w-100 my-10" [innerHTML]="blogPostContent"></div>
                         </mat-tab>
                     </mat-tab-group>
-                    <textarea class="w-100" formControlName="shortDescription"></textarea>
+                    <mat-form-field class="form-field w-100" appearance="standard">
+                        <mat-label>Short description</mat-label>
+                        <textarea class="w-100" matInput formControlName="shortDescription"></textarea>
+                        <mat-error
+                            *ngIf="blogForm.controls.shortDescription.touched && blogForm.controls.shortDescription.invalid">
+                            <span *ngIf="blogForm.controls.shortDescription.errors.required">This field is
+                                mandatory.</span>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="form-field w-100" appearance="standard">
+                        <mat-label>Post url</mat-label>
+                        <input matInput formControlName="postUrl">
+                        <mat-error *ngIf="blogForm.controls.postUrl.touched && blogForm.controls.postUrl.invalid">
+                            <span *ngIf="blogForm.controls.postUrl.errors.required">This field is mandatory.</span>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field class="form-field w-100" appearance="standard">
+                        <mat-label>Small image</mat-label>
+                        <input matInput formControlName="smallImage">
+                        <mat-error *ngIf="blogForm.controls.smallImage.touched && blogForm.controls.smallImage.invalid">
+                            <span *ngIf="blogForm.controls.smallImage.errors.required">This field is mandatory.</span>
+                        </mat-error>
+                    </mat-form-field>
                     <input type="file" class="d-block my-20" (change)="uploadFile($event)">
                     <div class="upload-progress" *ngIf="(uploadPercent$ | async) as percentage">
 

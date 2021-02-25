@@ -40,6 +40,8 @@ export class LandingFreeEbookComponent implements OnInit {
       .then(
         res => {
           this.newsletterForm.reset();
+          this.router.navigate(['/lp/thank-you-ebook']);
+          window.scrollTo({ top: 0 });
         }
       )
   }

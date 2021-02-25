@@ -1,0 +1,12 @@
+@import "~src/styles/main.scss";
+
+.email-table{
+    table{
+            tr th{
+                font-weight:bold;
+                background: gray;
+                color:white;
+                text-transform: uppercase;
+            }
+    }
+}

@@ -15,3 +15,9 @@ export class Comment {
     docId: string;
     docPath: string = "";
 }
+
+export interface Subscribers {
+    id: number;
+    name: string;
+    email: string;
+}

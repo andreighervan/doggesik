@@ -16,7 +16,10 @@ export class BlogService {
       title: value.title,
       blogContent: value.blogContent,
       fileUploaded: file,
-      uploadedDate: Date.now()
+      uploadedDate: Date.now(),
+      shortDescription: value.shortDescription,
+      postUrl: value.postUrl,
+      smallImage: value.smallImage
     });
   }
 

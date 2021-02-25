@@ -36,7 +36,9 @@ export class AddBlogPostComponent implements OnInit {
     this.blogForm = this.fb.group({
       title: ['', Validators.required],
       blogContent: ['', Validators.required],
-      shortDescription: ['', Validators.required]
+      shortDescription: ['', Validators.required],
+      postUrl: ['', Validators.required],
+      smallImage: ['', Validators.required]
     })
   }
 
