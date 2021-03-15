@@ -33,16 +33,17 @@ export class LandingFreeEbookComponent implements OnInit {
   }
 
   submit() {
-    if (!this.newsletterForm.valid) {
+    if (this.newsletterForm.invalid) {
       return;
     }
-    this.coreService.saveSubscriber(this.newsletterForm.value)
-      .then(
-        res => {
-          this.newsletterForm.reset();
-          this.router.navigate(['/lp/thank-you-ebook']);
-          window.scrollTo({ top: 0 });
-        }
-      )
+    debugger;
+    this.coreService.subscribeToList(this.newsletterForm.value)
+      .subscribe(res => {
+        this.newsletterForm.reset();
+        this.router.navigate(['/lp/thank-you-ebook']);
+        window.scrollTo({ top: 0 });
+      }, err => {
+        console.log(err);
+      })
   }
 }

@@ -1,4 +1,7 @@
 {
-    "email": "doggesik@gmail.com",
-    "password": "vsasxsuyzcyuxiun"
+    "EMAIL_USER": "contact@doggesik.com",
+    "EMAIL_PASSWORD": "123QQsuccess",
+    "EMAIL": "contact@doggesik.com",
+    "EMAIL_TO": "andrei.ghervan7@gmail.com",
+    "EMAIL_HOST": "mail.privateemail.com"
 }

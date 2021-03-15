@@ -2,8 +2,6 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
-var smtpTransport = require('nodemailer-smtp-transport');
-
 const details = require("./details.json");
 
 const app = express();
@@ -20,40 +18,37 @@ app.get("/", (req, res) => {
   );
 });
 
-app.post("/sendmail", (req, res) => {
+app.post("/sendmail", (request, res) => {
   console.log("request came");
-  let user = req.body;
-  sendMail(user, info => {
-    console.log(`The mail has beed send 😃 and the id is ${info.messageId}`);
-    res.send(info);
-  });
-});
-
-async function sendMail(user, callback) {
-
-  // create reusable transporter object using the default SMTP transport
-  let transporter = nodemailer.createTransport(smtpTransport({
+  const transporter = nodemailer.createTransport({
     host: 'mail.privateemail.com',
-    port: 587,
-    secure: false, // true for 465, false for other ports
+    port: 465,
+    secure: true,
     auth: {
-      user: "contact@doggesik.com",
-      pass: "123QQsuccess"
+      user: 'contact@doggesik.com',
+      pass: '123QQsuccess'
     }
-  }));
+  });
 
-  let mailOptions = {
-    from: "contact@doggesik.com", // sender address
-    to: "andrei.ghervan7@gmail.com", // list of receivers
-    subject: "Wellcome to Fun Of Heuristic 👻", // Subject line
-    html: `<h1>Hi andrei</h1><br>
-    <h4>Thanks for joining us</h4>`
+  const mailOptions = {
+    from: 'contact@doggesik.com',
+    to: 'andrei.ghervan7@gmail.com',
+    subject: `${request.body.name} Contacted You!`,
+    text: `
+      Name: ${request.body.name}
+      E-mail address: ${request.body.email}
+      Message: 'hello'
+    `
   };
 
-  // send mail with defined transport object
-  let info = await transporter.sendMail(mailOptions);
+  console.log(mailOptions);
+  console.log('transporter', transporter)
 
-  callback(info);
-}
-
-// main().catch(console.error);
+  transporter.sendMail(mailOptions, (error, info) => {
+    console.log(error, info);
+    if (error) {
+      return res.json({ error: true });
+    }
+    res.json({ done: true });
+  });
+});
