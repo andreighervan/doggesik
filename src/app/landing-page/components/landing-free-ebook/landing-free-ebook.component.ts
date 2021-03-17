@@ -11,6 +11,8 @@ import { CoreService } from 'src/app/core/services/core.service';
   encapsulation: ViewEncapsulation.None
 })
 export class LandingFreeEbookComponent implements OnInit {
+  submitted: boolean;
+
   newsletterForm: FormGroup;
 
   constructor(private coreService: CoreService, private router: Router,
@@ -34,9 +36,9 @@ export class LandingFreeEbookComponent implements OnInit {
 
   submit() {
     if (this.newsletterForm.invalid) {
+      this.submitted = true;
       return;
     }
-    debugger;
     this.coreService.subscribeToList(this.newsletterForm.value)
       .subscribe(res => {
         this.newsletterForm.reset();

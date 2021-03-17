@@ -42,21 +42,23 @@
                     <mat-form-field class="form-field" appearance="standard">
                         <mat-label> Your Name*</mat-label>
                         <input matInput formControlName="name">
-                        <mat-error *ngIf="newsletterForm.controls.name.touched && newsletterForm.controls.name.invalid">
-                            <span *ngIf="newsletterForm.controls.name.errors.required">This field is mandatory.</span>
+                        <mat-error class="my-10" *ngIf="submitted || newsletterForm.controls.name.touched">
+                            <span *ngIf="submitted || newsletterForm.controls.name.errors.required">This field is
+                                mandatory.</span>
                         </mat-error>
                     </mat-form-field>
                     <mat-form-field class="form-field" appearance="standard">
                         <mat-label> Your Email*
                         </mat-label>
                         <input matInput formControlName="email" type="email">
-                        <mat-error
-                            *ngIf="newsletterForm.controls.email.touched && newsletterForm.controls.email.invalid">
-                            <span *ngIf="newsletterForm.controls.email.errors.required">This field is mandatory.</span>
-                            <span *ngIf="newsletterForm.controls.email.errors.pattern">This field is invalid.</span>
+                        <mat-error class="my-10" *ngIf="submitted || newsletterForm.controls.email.touched">
+                            <span *ngIf="submitted || newsletterForm.controls.email.errors.required">This field is
+                                mandatory.</span>
+                            <span *ngIf="submitted || newsletterForm.controls.email.errors.pattern">This field is
+                                invalid.</span>
                         </mat-error>
                     </mat-form-field>
-                    <p class="text-white mt-10">DOGGESIK does not share our subscribers’ information with any third
+                    <p class="text-white mt-20">DOGGESIK does not share our subscribers’ information with any third
                         party.
                         For DOGGESIK educational and promotional purposes only. </p>
                     <button class="btn btn-light text-blue font-weight-bold btn-block text-uppercase mt-10"

@@ -13,7 +13,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class BlogItemComponent implements OnInit {
   @Input() blogPosts: Blog[];
-  editorRole: boolean = true;
+  editorRole: boolean = false;
 
   constructor(private db: AngularFirestore, private blogService: BlogService,
     private router: Router,

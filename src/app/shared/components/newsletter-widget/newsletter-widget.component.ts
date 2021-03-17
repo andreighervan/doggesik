@@ -1,5 +1,7 @@
 import { Component, Input, OnInit, SimpleChanges, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+
 import { CoreService } from 'src/app/core/services/core.service';
 
 @Component({
@@ -9,11 +11,13 @@ import { CoreService } from 'src/app/core/services/core.service';
   encapsulation: ViewEncapsulation.None
 })
 export class NewsletterWidgetComponent implements OnInit {
+  submitted: boolean;
   @Input() color: string = '';
   newsletterForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder,
-    private coreService: CoreService) { }
+    private coreService: CoreService,
+    private router: Router) { }
 
   ngOnInit() {
     this.buildNewsletterForm();
@@ -35,14 +39,17 @@ export class NewsletterWidgetComponent implements OnInit {
   }
 
   submit() {
-    if (!this.newsletterForm.valid) {
+    if (this.newsletterForm.invalid) {
+      this.submitted = true;
       return;
     }
-    this.coreService.saveSubscriber(this.newsletterForm.value)
-      .then(
-        res => {
-          this.newsletterForm.reset();
-        }
-      )
+    this.coreService.subscribeToList(this.newsletterForm.value)
+      .subscribe(res => {
+        this.newsletterForm.reset();
+        this.router.navigate(['/lp/thank-you-ebook']);
+        window.scrollTo({ top: 0 });
+      }, err => {
+        console.log(err);
+      })
   }
 }
