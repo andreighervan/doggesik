@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  editorUser: boolean = true;
+  editorUser: boolean = false;
   isLoggedIn$: Observable<boolean>;
   isLoggedOut$: Observable<boolean>;
 
