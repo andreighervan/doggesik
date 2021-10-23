@@ -43,82 +43,26 @@
                         <mat-label> Your Name*</mat-label>
                         <input matInput formControlName="name">
                         <mat-error class="my-10" *ngIf="submitted || newsletterForm.controls.name.touched">
-                            <span *ngIf="submitted || newsletterForm.controls.name.errors.required">This field is
+                            <span *ngIf="submitted || newsletterForm.controls.name.errors?.required">This field is
                                 mandatory.</span>
                         </mat-error>
                     </mat-form-field>
-                    <mat-form-field class="form-field" appearance="standard">
-                        <mat-label> Your Email*
-                        </mat-label>
+                    <mat-form-field class="form-field mt-10" appearance="standard">
+                        <mat-label> Your Email* </mat-label>
                         <input matInput formControlName="email" type="email">
                         <mat-error class="my-10" *ngIf="submitted || newsletterForm.controls.email.touched">
-                            <span *ngIf="submitted || newsletterForm.controls.email.errors.required">This field is
+                            <span *ngIf="submitted || newsletterForm.controls.email.errors?.required">This field is
                                 mandatory.</span>
-                            <span *ngIf="submitted || newsletterForm.controls.email.errors.pattern">This field is
+                            <span *ngIf="submitted || newsletterForm.controls.email.errors?.pattern">This field is
                                 invalid.</span>
                         </mat-error>
                     </mat-form-field>
-                    <p class="text-white mt-20">DOGGESIK does not share our subscribers’ information with any third
+                    <p class="text-white mt-30">DOGGESIK does not share our subscribers’ information with any third
                         party.
                         For DOGGESIK educational and promotional purposes only. </p>
                     <button class="btn btn-light text-blue font-weight-bold btn-block text-uppercase mt-10"
                         type="submit">Click to download for free!</button>
                 </form>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="testimonials">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="text-center">Testimonials</h1>
-                <p class="text-center mb-50">What Others Say</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card text-center">
-                    <img src="assets/img/landing-page/testimonial1.jpg" class="rounded-circle" alt="testimonial" />
-                    <p class="text-paragraph">"Both the exercises and the games are very practical so dog owners may
-                        use them throughout the day to have a well-trained dog. There are training nuggets throughout,
-                        both in the step-by-step instructions and the Troubleshooting sections that will help enrich the
-                        lives of both dogs and their owners!"</p>
-                    <p><strong>John Wolff, London, UK</strong></p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card text-center">
-                    <img src="assets/img/landing-page/testimonial2.jpg" class="rounded-circle" alt="testimonial" />
-                    <p class="text-paragraph">"Update on Ace - I have gotten him involved in playing some of the games
-                        and I can see a difference in his confidence already! My other dog played along and he became
-                        intrigued - now its a daily part of our routine. I am so grateful for coming upon your training
-                        techniques!"</p>
-                    <p><strong>Joanna A., Dog Owner</strong></p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card text-center">
-                    <img src="assets/img/landing-page/testimonial3.jpg" class="rounded-circle" alt="testimonial" />
-                    <p class="text-paragraph">"Today's dogs suffer from a lack of mental stimulation and quality time
-                        spent with ‘their’ people. The resulting boredom and anxiety can lead to no end of physical and
-                        behavioral problems. Brain Training for Dogs is the solution!"</p>
-                    <p><strong>Dr. J Coates, Veterinary Advisor at petMD.com</strong></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="call-to-action bg-blue py-80">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h1 class="text-white font-weight-bold mb-20">Free Download</h1>
-                <h2 class="text-white mb-40">Get your free copy of the e-book</h2>
-                <a href="/lp/free-ebook#hero" class="btn-download mx-auto btn w-50 btn-block btn-outline-light">START
-                    DOWNLOAD</a>
             </div>
         </div>
     </div>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Blog } from '../blog/models/blog';
 import { BlogService } from '../blog/services/blog.service';
 import { Meta, Title } from '@angular/platform-browser';
+import { CoreService } from '../core/services/core.service';
 
 @Component({
   selector: 'app-home',
@@ -12,11 +13,12 @@ export class HomeComponent implements OnInit {
 
   blogPosts: Blog[];
 
-  constructor(private blogService: BlogService, private meta: Meta, private title: Title) { }
+  constructor(private blogService: BlogService, private meta: Meta, private title: Title, private coreService: CoreService) { }
 
   ngOnInit() {
     this.loadBlogPosts();
     this.addMetaTags();
+    this.coreService.setComponentState(true)
   }
 
   loadBlogPosts() {
@@ -38,5 +40,7 @@ export class HomeComponent implements OnInit {
       { name: 'og: image', content: '/assets/images /home-meta.jpg' }
     ]);
   }
+
+
 
 }

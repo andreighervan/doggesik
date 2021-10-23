@@ -3,15 +3,15 @@
 .thank-you-header{
     border:2px solid gray;
     padding:1.875rem;
-    h3{
-        margin:2rem 0;
+    h4{
+        margin:1rem 0;
     }
 }
 main{
 h2{
     margin:2rem 0;
 }
-p,h3{
+p,h3,h4{
     margin-bottom:1rem;
 }
 ul{
@@ -42,3 +42,75 @@ ul{
     }
 }
 }
+
+    .thank-you-header {
+        border: 2px solid gray;
+        padding: 1.875rem;
+    }
+
+    .thank-you-header h3 {
+        margin: 2rem 0;
+    }
+
+    main h2 {
+        margin: 2rem 0;
+    }
+
+    main p,
+    main h3 {
+        margin-bottom: 1rem;
+    }
+
+    main ul {
+        padding-left: 2rem;
+    }
+
+    main ul li {
+        font-family: Monserrat;
+        line-height: 28px;
+        font-size: 16px;
+    }
+
+    main .btn-instant-access {
+        text-align: center;
+        display: block;
+        max-width: 400px;
+        background: orange;
+        color: white;
+        font-weight: bold;
+        font-size: 2.25rem;
+        text-decoration: none;
+        margin: 1.5rem auto;
+        padding: 1.5rem;
+        border-radius: 4px;
+    }
+
+    main .btn-instant-access:hover {
+        opacity: 0.8;
+    }
+
+    @media (max-width: 61.99em) {
+        main .btn-instant-access {
+            font-size: 1.6rem;
+        }
+    }
+
+    .list-product-features li {
+        font-size: 22px;
+        margin-bottom: 5px;
+    }
+
+    .diet-video{
+        height:500px;
+    }
+   
+    #submit-button{
+        font-size:18px;
+        line-height:40px;
+    }
+
+    .list-product-features li{
+        font-weight:bold;
+        font-size: 20px;
+    }
+

@@ -34,6 +34,7 @@
         button{
             font-size:14px;
             min-width:13.125rem;
+            margin-bottom:8px;
         }
         @media (max-width:992px){
             display: block;
@@ -57,6 +58,7 @@
         button{
             font-size:14px;
             min-width:15rem;
+            margin-bottom:8px;
         }
         @media (max-width:992px){
             display: block;
@@ -65,4 +67,10 @@
                 width:100%;
             }
         }
+}
+
+.ebook-image{
+    img{
+        height:250px;
+    }
 }

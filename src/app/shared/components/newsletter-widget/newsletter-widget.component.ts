@@ -43,13 +43,30 @@ export class NewsletterWidgetComponent implements OnInit {
       this.submitted = true;
       return;
     }
-    this.coreService.subscribeToList(this.newsletterForm.value)
-      .subscribe(res => {
+    const url = 'https://api.sendinblue.com/v3/contacts';
+    const options = {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+        'api-key': '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'
+      },
+      body: JSON.stringify({
+        email: this.newsletterForm.controls['email'].value,
+        attributes: { FIRSTNAME: this.newsletterForm.controls['name'].value },
+        listIds: [9],
+        updateEnabled: true
+      })
+    };
+
+    fetch(url, options)
+      .then(res => res.json())
+      .then(json => {
+        console.log(json);
         this.newsletterForm.reset();
         this.router.navigate(['/lp/thank-you-ebook']);
         window.scrollTo({ top: 0 });
-      }, err => {
-        console.log(err);
       })
+      .catch(err => console.error('error:' + err));
   }
 }
