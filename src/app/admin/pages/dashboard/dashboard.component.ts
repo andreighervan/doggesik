@@ -3,6 +3,7 @@ import { ProductsService } from '../../../products/services/products.service';
 import { UsersService } from '../../../users/services/users.service';
 import { combineLatest, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { CoreService } from 'src/app/core/services/core.service';
 
 @Component({
   selector: 'admin-dashboard',
@@ -14,10 +15,12 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
   constructor(
     private userService: UsersService,
-    private productService: ProductsService
-  ) {}
+    private productService: ProductsService,
+    private coreService: CoreService
+  ) { }
 
   ngOnInit(): void {
+    this.coreService.setComponentState(false)
     combineLatest([
       this.productService.getProductsCount(),
       this.userService.getUsersCount()

@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
-                    <app-blog-item class="row" [blogPosts]="blogPosts"></app-blog-item>
+                    <app-blog-item class="row" [posts]="posts$ | async"></app-blog-item>
             </div>
             <div class="col-lg-4">
                 <app-sidebar></app-sidebar>

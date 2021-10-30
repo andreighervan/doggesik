@@ -2,16 +2,16 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { environment } from '@env/environment';
+import { environment } from '../../../environments/environment';
 import { Product } from '../models/product';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
-  apiURLProducts = environment.apiUrl + 'products';
+  apiURLProducts = environment.apiUrl + 'posts';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getProducts(categoriesFilter?: string[]): Observable<Product[]> {
     let params = new HttpParams();

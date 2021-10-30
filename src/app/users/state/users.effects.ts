@@ -9,7 +9,7 @@ import { LocalstorageService } from '../services/localstorage.service';
 import { of } from 'rxjs';
 import { UsersService } from '../services/users.service';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class UsersEffects {
   buildUserSession$ = createEffect(() =>
     this.actions$.pipe(
@@ -38,5 +38,5 @@ export class UsersEffects {
     private actions$: Actions,
     private localstorageService: LocalstorageService,
     private usersService: UsersService
-  ) {}
+  ) { }
 }

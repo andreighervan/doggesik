@@ -1,16 +1,15 @@
-<div class="blog-card mb-40 col-md-6" *ngFor="let blogItem of blogPosts">
-    <img [src]="blogItem.fileUploaded" [alt]="blogItem.title" />
-    <a (click)=" goToSinglePost(blogItem)" target="_blank">
-        <h4 class="font-weight-bold py-20">{{blogItem.title}}</h4>
+<div class="blog-card mb-40 col-md-6" *ngFor="let post of posts">
+    <img [src]="post.image" [alt]="post.name" />
+    <a (click)="goToSinglePost(post)" target="_blank">
+        <h4 class="font-weight-bold py-20">{{post.name}}</h4>
     </a>
-    <span class="text-lightgray"><i class="fas fa-clock"></i> {{blogItem.uploadedDate | date:'MMMM d, y'}}</span>
+    <span class="text-lightgray"><i class="fas fa-clock"></i> {{post.dateCreated | date:'MMMM d, y'}}</span>
     <div class="blog-content mt-5">
-        <p [innerHTML]="blogItem.shortDescription"></p>
+        <p [innerHTML]="post.description"></p>
     </div>
-    <button type="button" class="btn btn-success mr-10" *ngIf="editorRole" (click)="editPost(blogItem)">EDIT
+    <button type="button" class="btn btn-success mr-10" *ngIf="editorRole" (click)="editPost(post)">EDIT
         POST</button>
-    <button type="button" class="btn btn-danger" *ngIf="editorRole" (click)="deletePost(blogItem)">DELETE POST</button>
-    <button type="button" class="btn btn-see-more d-block btn-outline-success my-10"
-        (click)=" goToSinglePost(blogItem)">See
+    <button type="button" class="btn btn-danger" *ngIf="editorRole" (click)="deletePost(post)">DELETE POST</button>
+    <button type="button" class="btn btn-see-more d-block btn-outline-success my-10" (click)="goToSinglePost(post)">See
         More...</button>
 </div>

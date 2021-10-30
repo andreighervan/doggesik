@@ -1,10 +1,18 @@
 export interface Blog {
     id: string;
-    title: string;
-    blogContent: string;
-    fileUploaded: string;
-    shortDescription: string;
-    postUrl: string;
+    category: Category;
+    dateCreated: string;
+    description: string;
+    image: string;
+    images: string[];
+    isFeatured: boolean;
+    name: string;
+    richDescription: string;
+}
+
+export interface Category {
+    id: string;
+    name: string;
 }
 
 export class Comment {

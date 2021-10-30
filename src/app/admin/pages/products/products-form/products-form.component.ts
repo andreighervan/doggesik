@@ -8,6 +8,7 @@ import { ProductsService } from '../../../../products/services/products.service'
 import { MessageService } from 'primeng/api';
 import { Subject, timer } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { AngularEditorConfig } from '@kolkov/angular-editor';
 
 @Component({
   selector: 'admin-products-form',
@@ -23,6 +24,51 @@ export class ProductsFormComponent implements OnInit, OnDestroy {
   currentProductId: string;
   endsubs$: Subject<any> = new Subject();
 
+  editorConfig: AngularEditorConfig = {
+    editable: true,
+    spellcheck: true,
+    height: 'auto',
+    minHeight: '250px',
+    maxHeight: 'auto',
+    width: 'auto',
+    minWidth: '0',
+    translate: 'yes',
+    enableToolbar: true,
+    showToolbar: true,
+    placeholder: 'Enter text here...',
+    defaultParagraphSeparator: '',
+    defaultFontName: '',
+    defaultFontSize: '',
+    fonts: [
+      { class: 'arial', name: 'Arial' },
+      { class: 'times-new-roman', name: 'Times New Roman' },
+      { class: 'calibri', name: 'Calibri' },
+      { class: 'comic-sans-ms', name: 'Comic Sans MS' }
+    ],
+    customClasses: [
+      {
+        name: 'quote',
+        class: 'quote',
+      },
+      {
+        name: 'redText',
+        class: 'redText'
+      },
+      {
+        name: 'titleText',
+        class: 'titleText',
+        tag: 'h1',
+      },
+    ],
+    uploadUrl: 'http://localhost:3000/api/v1/public/upload/',
+    uploadWithCredentials: false,
+    sanitize: true,
+    toolbarPosition: 'top',
+    toolbarHiddenButtons: [
+      []
+    ]
+  };
+
   constructor(
     private formBuilder: FormBuilder,
     private productsService: ProductsService,
@@ -30,7 +76,7 @@ export class ProductsFormComponent implements OnInit, OnDestroy {
     private messageService: MessageService,
     private location: Location,
     private route: ActivatedRoute
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this._initForm();
@@ -46,10 +92,7 @@ export class ProductsFormComponent implements OnInit, OnDestroy {
   private _initForm() {
     this.form = this.formBuilder.group({
       name: ['', Validators.required],
-      brand: ['', Validators.required],
-      price: ['', Validators.required],
       category: ['', Validators.required],
-      countInStock: ['', Validators.required],
       description: ['', Validators.required],
       richDescription: [''],
       image: ['', Validators.required],
@@ -75,7 +118,7 @@ export class ProductsFormComponent implements OnInit, OnDestroy {
           this.messageService.add({
             severity: 'success',
             summary: 'Success',
-            detail: `Product ${product.name} is created!`
+            detail: `Post ${product.name} is created!`
           });
           timer(2000)
             .toPromise()
@@ -87,7 +130,7 @@ export class ProductsFormComponent implements OnInit, OnDestroy {
           this.messageService.add({
             severity: 'error',
             summary: 'Error',
-            detail: 'Product is not created!'
+            detail: 'Post is not created!'
           });
         }
       );
@@ -102,7 +145,7 @@ export class ProductsFormComponent implements OnInit, OnDestroy {
           this.messageService.add({
             severity: 'success',
             summary: 'Success',
-            detail: 'Product is updated!'
+            detail: 'Post is updated!'
           });
           timer(2000)
             .toPromise()
@@ -114,7 +157,7 @@ export class ProductsFormComponent implements OnInit, OnDestroy {
           this.messageService.add({
             severity: 'error',
             summary: 'Error',
-            detail: 'Product is not updated!'
+            detail: 'Post is not updated!'
           });
         }
       );
@@ -131,9 +174,6 @@ export class ProductsFormComponent implements OnInit, OnDestroy {
           .subscribe((product) => {
             this.productForm.name.setValue(product.name);
             this.productForm.category.setValue(product.category.id);
-            this.productForm.brand.setValue(product.brand);
-            this.productForm.price.setValue(product.price);
-            this.productForm.countInStock.setValue(product.countInStock);
             this.productForm.isFeatured.setValue(product.isFeatured);
             this.productForm.description.setValue(product.description);
             this.productForm.richDescription.setValue(product.richDescription);

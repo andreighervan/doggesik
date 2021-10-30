@@ -10,6 +10,7 @@ import { EffectsModule } from '@ngrx/effects';
 import * as fromUsers from './state/users.reducer';
 import { UsersEffects } from './state/users.effects';
 import { UsersFacade } from './state/users.facade';
+import { UsersRoutingModule } from './users-routing.module';
 
 const routes: Routes = [
   {
@@ -25,11 +26,11 @@ const routes: Routes = [
     InputTextModule,
     ButtonModule,
     FormsModule,
+    UsersRoutingModule,
     ReactiveFormsModule,
     StoreModule.forFeature(fromUsers.USERS_FEATURE_KEY, fromUsers.reducer),
     EffectsModule.forFeature([UsersEffects])
   ],
-  declarations: [LoginComponent],
-  providers: [UsersFacade]
+  declarations: [LoginComponent]
 })
 export class UsersModule {}

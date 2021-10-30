@@ -12,7 +12,7 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./blog-item.component.scss']
 })
 export class BlogItemComponent implements OnInit {
-  @Input() blogPosts: Blog[];
+  @Input() posts: Blog[];
   editorRole: boolean = false;
 
   constructor(private db: AngularFirestore, private blogService: BlogService,
@@ -34,18 +34,18 @@ export class BlogItemComponent implements OnInit {
 
 
   loadBlogPosts() {
-    this.blogService.loadAllPosts()
+    this.blogService.getPosts()
       .pipe(
-      ).subscribe(posts => this.blogPosts = posts);
+      ).subscribe(posts => this.posts = posts);
   }
 
   editPost(post: Blog) {
-    this.router.navigate(['/blog/edit', post.postUrl]);
+    this.router.navigate(['/blog/edit', post.name]);
   }
 
   goToSinglePost(post) {
     window.scrollTo({ top: 0 });
-    this.router.navigate(['/blog', post.postUrl]);
+    this.router.navigate(['/blog', post.name]);
   }
 
   truncate(str, no_words) {

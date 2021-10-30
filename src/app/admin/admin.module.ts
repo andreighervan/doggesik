@@ -1,8 +1,6 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AdminComponent } from './admin.component';
 import { ShellComponent } from './shared/shell/shell.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
@@ -35,8 +33,8 @@ import { TagModule } from 'primeng/tag';
 import { InputMaskModule } from 'primeng/inputmask';
 import { FieldsetModule } from 'primeng/fieldset';
 import { AdminRoutingModule } from './admin-routing.module';
-import { StoreModule } from '@ngrx/store';
-import { EffectsModule } from '@ngrx/effects';
+import { CommonModule } from '@angular/common';
+import { AngularEditorModule } from '@kolkov/angular-editor';
 
 const UX_MODULE = [
   CardModule,
@@ -71,15 +69,14 @@ const UX_MODULE = [
     UsersFormComponent
   ],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
+    CommonModule,
     AdminRoutingModule,
     HttpClientModule,
-    StoreModule.forRoot({}),
-    EffectsModule.forRoot([]),
     FormsModule,
+    AngularEditorModule,
     ReactiveFormsModule,
     UsersModule,
+    
     ...UX_MODULE
   ],
   providers: [

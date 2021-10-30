@@ -4,7 +4,16 @@
 
 export const environment = {
     production: false,
-    apiUrl: 'http://localhost:3000/api/v1/'
+    apiUrl: 'http://localhost:3000/api/v1/',
+    firebase: {
+        apiKey: "AIzaSyBIs5GeI3aXjKYgGH7DBq9728tYaluOwbE",
+        authDomain: "gesiklo.firebaseapp.com",
+        projectId: "gesiklo",
+        storageBucket: "gesiklo.appspot.com",
+        messagingSenderId: "369924650396",
+        appId: "1:369924650396:web:13bcc01fbd83261fcfc459",
+        measurementId: "G-5MNEKK1223"
+    }
 };
 
 /*

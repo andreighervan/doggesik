@@ -23,9 +23,9 @@ export class HomeComponent implements OnInit {
 
   loadBlogPosts() {
 
-    this.blogService.loadAllPosts()
+    this.blogService.getPosts()
       .pipe(
-      ).subscribe(posts => this.blogPosts = posts);
+      ).subscribe(posts => console.log(posts));
   }
 
   addMetaTags() {

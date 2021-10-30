@@ -15,6 +15,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
     AngularFirestoreModule,
     AngularFireStorageModule,
     SharedModule,
+    StoreModule.forRoot({}),
+    EffectsModule.forRoot([]),
     HttpClientModule,
     HttpClientJsonpModule
   ],

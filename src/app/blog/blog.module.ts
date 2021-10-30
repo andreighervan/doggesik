@@ -18,6 +18,7 @@ import { EditBlogPostComponent } from './components/edit-blog-post/edit-blog-pos
 import { BlogSingleComponent } from './components/blog-single/blog-single.component';
 import { BlogContentComponent } from './components/blog-content/blog-content.component';
 import { CommentComponent } from './components/comment/comment.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [BlogComponent, AddBlogPostComponent, EditBlogPostComponent, BlogSingleComponent, BlogContentComponent, CommentComponent],
@@ -27,6 +28,7 @@ import { CommentComponent } from './components/comment/comment.component';
     ReactiveFormsModule,
     FormsModule,
     SharedModule,
+    HttpClientModule,
     MatFormFieldModule,
     MatInputModule,
     MatTabsModule,

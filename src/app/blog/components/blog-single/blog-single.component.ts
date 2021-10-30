@@ -21,8 +21,11 @@ export class BlogSingleComponent implements OnInit {
   }
 
   ngOnInit() {
+    const blogUrl = this.route.snapshot.paramMap.get('blogUrl');
     this.sub = this.route.data.subscribe(event => {
-      this.blog = event['blogPost'];
+      this.blog = event['blogPost'].filter(item => item.name === blogUrl)[0];
+      console.log(this.blog)
+      return this.blog;
     })
   }
 

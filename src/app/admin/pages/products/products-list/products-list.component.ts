@@ -19,7 +19,7 @@ export class ProductsListComponent implements OnInit, OnDestroy {
     private router: Router,
     private messageService: MessageService,
     private confirmationService: ConfirmationService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this._getProducts();
@@ -40,7 +40,7 @@ export class ProductsListComponent implements OnInit, OnDestroy {
   }
 
   updateProduct(productid: string) {
-    this.router.navigateByUrl(`products/form/${productid}`);
+    this.router.navigateByUrl(`admin/products/form/${productid}`);
   }
 
   deleteProduct(productId: string) {

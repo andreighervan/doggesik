@@ -60,7 +60,7 @@ export class CategoriesListComponent implements OnInit, OnDestroy {
   }
 
   updateCategory(categoryid: string) {
-    this.router.navigateByUrl(`categories/form/${categoryid}`);
+    this.router.navigateByUrl(`admin/categories/form/${categoryid}`);
   }
 
   private _getCategories() {

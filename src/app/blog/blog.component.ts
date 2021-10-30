@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Blog } from './models/blog';
 import { BlogService } from './services/blog.service';
 
@@ -8,20 +9,12 @@ import { BlogService } from './services/blog.service';
   styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent implements OnInit {
-  blogPosts: Blog[];
+  posts$: Observable<any[]>;
   
   constructor(private blogService: BlogService) { }
 
   ngOnInit() {
-    this.loadBlogPosts();
+    this.posts$ = this.blogService.getPosts()
   }
-
-  loadBlogPosts() {
-
-    this.blogService.loadAllPosts()
-      .pipe(
-      ).subscribe(posts => this.blogPosts=posts);
-  }
-
 
 }

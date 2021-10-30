@@ -11,7 +11,7 @@ export interface UsersState {
 }
 
 export interface UsersPartialState {
-  readonly [USERS_FEATURE_KEY]: UsersState;
+  readonly [USERS_FEATURE_KEY]?: UsersState;
 }
 
 export const initialUsersState: UsersState = {

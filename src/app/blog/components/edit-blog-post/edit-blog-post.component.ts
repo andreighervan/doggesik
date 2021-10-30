@@ -31,8 +31,8 @@ export class EditBlogPostComponent implements OnInit {
     this.blog = this.route.snapshot.data["blogPost"];
     this.buildBlogForm();
     this.setFormValues(this.blog);
-    this.downloadableURL.next(this.blog.fileUploaded);
-    this.downloadableURL.subscribe(url => this.urlImage = url);
+    //this.downloadableURL.next(this.blog.fileUploaded);
+    //this.downloadableURL.subscribe(url => this.urlImage = url);
   }
 
   setFormValues(blog) {
